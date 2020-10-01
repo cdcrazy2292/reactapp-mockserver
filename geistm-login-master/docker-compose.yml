@@ -1,0 +1,16 @@
+version: '2.4'
+services:
+  login-mockserverr:
+    container_name: login-server
+    image: mockserver/mockserver:mockserver-5.10.0
+    ports:
+      - 1080:1080
+    volumes:
+      - './mockserver/loginMock.json:/tmp/loginMock'
+    environment:
+      LOG_LEVEL: 'DEBUG'
+      SERVER_PORT: 1080
+      PROXY_REMOTE_PORT: 80
+      MOCKSERVER_INITIALIZATION_JSON_PATH: /tmp/loginMock
+      MOCKSERVER_ENABLE_CORS_FOR_API: “true”
+      MOCKSERVER_ENABLE_CORS_FOR_ALL_RESPONSES: “true”

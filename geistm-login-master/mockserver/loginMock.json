@@ -1,0 +1,49 @@
+[
+  {
+    "httpRequest": {
+      "path": "/sampleGet",
+      "method": "GET"
+    },
+    "httpResponse": {
+      "statusCode": 200,
+      "body": {
+        "type": "JSON",
+        "json": [
+          {
+            "name": "Connie",
+            "lastName": "Lok",
+            "cell": "999-999-9999",
+            "address": "somewhere in the world",
+            "email": "email@email.com"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "httpRequest": {
+      "path": "/some-post-path",
+      "method": "POST",
+      "body": {
+        "user": {
+          "name": "some name"
+        }
+      }
+    },
+    "httpResponse": {
+      "statusCode": 204,
+      "body": {
+        "type": "JSON",
+        "json": [
+          {
+            "name": "Connie",
+            "lastName": "Lok",
+            "cell": "999-999-9999",
+            "address": "somewhere in the world",
+            "email": "email@email.com"
+          }
+        ]
+      }
+    }
+  }
+]
